@@ -8,7 +8,7 @@ end
 
 gem 'rails', '~> 5.1.3'
 group :production do
-  gem 'pg', "~> 0.18" 
+  gem 'pg', "~> 0.18"
 end
 # gem 'pg', '< 1.0.0', group: :production
 gem 'puma', '~> 3.7'
@@ -19,6 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
