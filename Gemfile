@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
 gem 'devise'
 gem 'activeadmin'
+gem 'execjs'
 
 
 group :development, :test do

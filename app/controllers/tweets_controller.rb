@@ -1,6 +1,5 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  # before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   # GET /tweets
   def index
@@ -48,6 +47,7 @@ class TweetsController < ApplicationController
     @tweet.destroy
     redirect_to tweets_url, notice: 'Tweet was successfully destroyed.'
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
