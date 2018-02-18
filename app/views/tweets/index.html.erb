@@ -6,7 +6,7 @@
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Your Account</h5>
-          <p class="card-text"><%= current_user.email %></p>
+          <p class="card-text"><%= current_user.username %></p>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <%= link_to tweet do %>
           <li class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1"><%= tweet.user.email %></h5>
+              <h5 class="mb-1"><%= tweet.user.name %></h5>
               <!-- <small class="text-muted">3 days ago</small> -->
             </div>
             <p class="mb-1"><%= tweet.content %></p>
