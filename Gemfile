@@ -24,6 +24,7 @@ gem 'devise'
 gem 'activeadmin'
 gem 'execjs'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+gem 'acts_as_votable', '~> 0.11.1'
 
 
 group :development, :test do

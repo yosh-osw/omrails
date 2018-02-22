@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     delete "signout", to: 'devise/sessions#destroy'
     get "signup", to: 'devise/registrations#new'
   end
-  
+
   get 'feed', to: 'feed#show'
 
   resources :users, only: :show, param: :username do
@@ -15,7 +15,12 @@ Rails.application.routes.draw do
       delete 'unfollow', to: 'follows#destroy'
     end
   end
-  resources :items
+  resources :items do
+    member do
+      post 'vote', to: 'votes#create'
+      delete 'unvote', to: 'votes#destroy'
+    end
+  end
   resources :tweets
   root 'pages#home'
   get 'about', to: 'pages#about'
