@@ -5,8 +5,12 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Your Account</h5>
-          <p class="card-text"><%= link_to current_user.username,  user_path(current_user.username) %></p>
+          <% if user_signed_in? %>
+            <h5 class="card-title">Your Account</h5>
+            <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
+            <% else %>
+          <p class="card-text"><%= link_to "Sign up now!", signup_path %></p>
+          <% end %>
         </div>
       </div>
     </div>
@@ -16,7 +20,7 @@
       <% end %>
       <ul class="list-group">
         <% @tweets.each do |tweet| %>
-        <%= link_to tweet do %>
+          <%= link_to tweet do %>
           <li class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1"><%= tweet.user.name %></h5>
