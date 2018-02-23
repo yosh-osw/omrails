@@ -25,6 +25,7 @@ gem 'activeadmin'
 gem 'execjs'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_votable', '~> 0.11.1'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
 
 group :development, :test do
